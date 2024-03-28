@@ -1,23 +1,22 @@
 # How well you can understand the internals of your system by examining its outputs
 
 ## Performance oriented Spring Data JPA & Hibernate by Maciej Walkowiak 
-    https://www.youtube.com/watch?v=exqfB1WaqIw&t=271s
+https://www.youtube.com/watch?v=exqfB1WaqIw&t=271s
 
 ## TransactionalTemplate
-    to start transaction manually to reduce connection leased
+to start transaction manually to reduce connection leased
 
 ## @DynamicUpdate 
-    everytime we make changes to update record we should do .save(), but if we dont annotated entity with @DynamicUpdate it will update all fields
+everytime we make changes to update record we should do .save(), but if we dont annotated entity with @DynamicUpdate it will update all fields
 
 ## getReferenceById
-    in case we need to write record which having relation, we only need its id, not with full object record. this can save hibernate works
+in case we need to write record which having relation, we only need its id, not with full object record. this can save hibernate works
 
 ## Dynamic projection
-    fetch entity only with an intention to modify it. if its only for select, 
-    <T> T findById(String id, Class<T> clazz). Because when entity having relation like @ManyToOne, fetching more data than needed & loaded entities stored in jpa persistence context in memory
+fetch entity only with an intention to modify it. if its only for select, <T> T findById(String id, Class<T> clazz). Because when entity having relation like @ManyToOne, fetching more data than needed & loaded entities stored in jpa persistence context in memory
 
 ## @EntityGraph(attributePaths={}) on repository
-    to solve n + 1 problems due to fetch entity with relation to another entity
+to solve n + 1 problems due to fetch entity with relation to another entity
 
 ## Conclusion for GET enpoints:
 1. "book" 
